@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '7.0'
+
+pod 'THSlackLogger', :path=> './../../THSlackLogger'
+
+pod 'AFNetworking', '~> 3.0.4'
+pod 'CocoaLumberjack', '~> 2.2.0'
+
+target 'THSlackLoggerDemoTests' do
+
+end
+

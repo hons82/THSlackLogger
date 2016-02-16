@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SV-65-36X">
+                                <rect key="frame" x="223" y="141" width="155" height="30"/>
+                                <state key="normal" title="Post a sample to Slack"/>
+                                <connections>
+                                    <action selector="postNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o28-Ee-jTO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Do1-mY-1yD">
+                                <rect key="frame" x="258" y="179" width="84" height="30"/>
+                                <state key="normal" title="Log an Error"/>
+                                <connections>
+                                    <action selector="logError:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMw-1W-nKs"/>
+                                    <action selector="postNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Wp-fu-X2E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6r-xv-fmn">
+                                <rect key="frame" x="251" y="217" width="99" height="30"/>
+                                <state key="normal" title="Log a Warning"/>
+                                <connections>
+                                    <action selector="logWarning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOV-nJ-gpH"/>
+                                    <action selector="postNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LnQ-eY-htJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHb-pL-reu">
+                                <rect key="frame" x="262" y="255" width="76" height="30"/>
+                                <state key="normal" title="Log an Info"/>
+                                <connections>
+                                    <action selector="logInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="79x-Th-9Di"/>
+                                    <action selector="postNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yNr-0o-LXv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGe-GP-BM7">
+                                <rect key="frame" x="257" y="293" width="86" height="30"/>
+                                <state key="normal" title="Log Verbose"/>
+                                <connections>
+                                    <action selector="logTrace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IIZ-jF-Rx6"/>
+                                    <action selector="postNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blX-xb-rFH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u6r-xv-fmn" firstAttribute="top" secondItem="Do1-mY-1yD" secondAttribute="bottom" constant="8" id="0us-bg-CIb"/>
+                            <constraint firstItem="mGe-GP-BM7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4of-gT-rDi"/>
+                            <constraint firstItem="mGe-GP-BM7" firstAttribute="top" secondItem="yHb-pL-reu" secondAttribute="bottom" constant="8" id="BRc-Jt-8vk"/>
+                            <constraint firstItem="yHb-pL-reu" firstAttribute="top" secondItem="u6r-xv-fmn" secondAttribute="bottom" constant="8" id="EwL-Pb-8aR"/>
+                            <constraint firstItem="5SV-65-36X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IHc-xy-VBD"/>
+                            <constraint firstItem="yHb-pL-reu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nbh-mL-fAV"/>
+                            <constraint firstItem="Do1-mY-1yD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VIC-4s-ygN"/>
+                            <constraint firstItem="5SV-65-36X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="121" id="WlL-Ap-SHS"/>
+                            <constraint firstItem="u6r-xv-fmn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bGJ-Bo-1Pj"/>
+                            <constraint firstItem="Do1-mY-1yD" firstAttribute="top" secondItem="5SV-65-36X" secondAttribute="bottom" constant="8" id="lTz-eA-nWG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
